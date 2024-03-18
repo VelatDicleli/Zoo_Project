@@ -42,7 +42,7 @@ public class Zoo<T extends Animal> {
 
     // olayları gerçekleştirme methodu.
     private void run(){
-        // her türdeki hayvan ( avcı da dahil ) toplam olarak 10 döngüde 1000 birim mesafe alır )
+        // her türdeki hayvan ( avcı da dahil ) aldığı toplam 1000 birim mesafe 100 döngüde tamamlanır. )
 
         for(int i = 0;i<100;i++){
 
@@ -140,8 +140,9 @@ public class Zoo<T extends Animal> {
                     T newAnimal = (T) AnimalFactory.createAnimal(animal1.getClass(), rand.nextBoolean());
                     animals.add(newAnimal);
                     System.out.println("Yeni hayvan oluşturuldu: " + newAnimal.getX() + "," + newAnimal.getY() + "|" + newAnimal.getGender());
-                    moveAllAnimals(); // bir çiftin yeni aile üyesi oluştuktan sonra hayvanlar hareket etmeli
-                    // eğer hareket etmesi ilgili çift sürekli aynı yerde kaldığı için aynı şekilde üremeye devam eder.
+                    moveAllAnimals(); 
+                    // bir çiftin yeni aile üyesi oluştuktan sonra hayvanlar hareket etmeli
+                    // eğer hareket etmez ise ilgili çift sürekli aynı yerde kaldığı için aynı şekilde üremeye devam eder.
                     // Bir eylemden sonra hayvanlar hareket etmeli.
                 }
 
